@@ -26,14 +26,15 @@ Files on another machine and over 400 KB are read only.
 `workbench.iconTheme` in the settings of VS Code, Cursor, Insiders or VSCodium, finds
 the extension in its folder, and copies the theme's SVG and PNG files to
 `data/herdr-editor/icons/<theme>`. Lookup follows VS Code: exact name, longest
-extension, language id, default.
+extension, language id, default. `bundled.js` and `icons/` are Clowk Icons, used when
+the editor has no theme with files.
 
 **Watch out:** it reads your editor's settings and extensions in your home folder, and
 runs programs. `set_value` fires no `change` event, so unsaved state is read from the
 editor, never kept from events. Seti and other font themes have no files to copy, so
-plain icons show. `data/` is the only place outside the mod that it writes.
+the bundled icons show. `data/` is the only place outside the mod that it writes.
 
 **Done when:** `herdr-app check` passes. With an SVG theme active, rows show its icons.
-With none, rows show plain icons. Editing, then saving, writes the file with its line
+With none, rows show the bundled icons. Editing, then saving, writes the file with its line
 endings. Changing the file on disk while editing shows the bar and keeps the disk as
 it was.

@@ -1,6 +1,6 @@
-// The file icon theme of the person's own VS Code or Cursor. No icon ships with this
-// mod: the active theme is read from the editor's settings and its SVGs are copied
-// under the app's data folder, where a mod can draw them.
+// The file icon theme of the person's own VS Code or Cursor: the active theme is read
+// from the editor's settings and its icons are copied under the app's data folder,
+// where a mod can draw them. Without one, the mod uses its bundled Clowk Icons.
 import { exec, home, appHome } from "herdr";
 
 const EDITORS = [
@@ -81,7 +81,7 @@ function lower(map = {}) {
   return Object.fromEntries(Object.entries(map).map(([name, icon]) => [name.toLowerCase(), icon]));
 }
 
-// Null when there is no theme with SVG or PNG icons: the mod draws its plain icons.
+// Null when the editor has no theme with SVG or PNG icons.
 export async function loadIconTheme() {
   for (const editor of EDITORS) {
     const id = await activeTheme(editor);

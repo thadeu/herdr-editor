@@ -5,5 +5,8 @@ Built from the `files` mod of the Herdr app, Copyright Herdr contributors,
 licensed under the Apache License, Version 2.0. Changed: file icon themes, the
 row layout, git colors and file editing.
 
-This repository contains no third-party file icons. Icons are read at run time
-from the file icon theme installed in your own editor, under that theme's license.
+The Apache License does not cover mods/herdr-editor/icons/ or the icon map in
+mods/herdr-editor/bundled.js. They are Clowk Icons, under their own terms in
+mods/herdr-editor/icons/LICENSE.
+
+A file icon theme read from your own editor stays under that theme's license.

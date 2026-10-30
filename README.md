@@ -4,8 +4,8 @@ A VS Code style file sidebar and editor for the [Herdr](https://herdr.dev) app.
 
 ![herdr-editor](mods/herdr-editor/preview.png)
 
-- **Your own icons.** It uses the file icon theme active in your VS Code or Cursor.
-  No icon ships with this mod.
+- **Icons.** It uses the file icon theme active in your VS Code or Cursor, and ships
+  with Clowk Icons for everyone else.
 - **Git colors.** New, changed and ignored files, and a mark on the folders that
   hold changes.
 - **An editor.** Click a file, edit it and press `cmd-s`.
@@ -34,7 +34,8 @@ VS Code Insiders or VSCodium, and copies that theme's icons to
 `~/.config/herdr-app/data/herdr-editor/`.
 
 Themes with SVG or PNG icons work. VS Code's default theme, Seti, draws its icons
-with a font, so the mod shows plain icons with it. Install any SVG theme to see them.
+with a font, so with Seti, or with no editor at all, the mod uses the Clowk Icons it
+ships with.
 
 ## Limits
 
@@ -43,4 +44,5 @@ with a font, so the mod shows plain icons with it. Install any SVG theme to see 
 
 ## License
 
-Apache-2.0. See [NOTICE](NOTICE).
+The code is Apache-2.0. Clowk Icons have [their own terms](mods/herdr-editor/icons/LICENSE).
+See [NOTICE](NOTICE).

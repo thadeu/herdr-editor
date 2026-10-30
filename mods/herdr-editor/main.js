@@ -7,6 +7,7 @@ import { View, div, svg, image } from "gpui-kit";
 import { v_flex, h_flex, Editor, EditorState } from "gpui-base";
 import { spaces, panes, focused, exec, readTextFile, writeTextFile, watchFolder, theme, settings, window, nextCommand } from "herdr";
 import { loadIconTheme, fileIcon, folderIcon } from "./icons.js";
+import { BUNDLED } from "./bundled.js";
 
 function location() {
   const space = spaces().find(s => s.active), f = focused();
@@ -39,8 +40,9 @@ export default class Files extends View {
     this.entries = new Map(); this.folders = new Set(); this.pending = new Set(); this.marks = {};
     this.refresh(cx);
     cx.timer.every(10000, cx => this.refresh(cx));
+    this.iconTheme = BUNDLED;
     cx.spawn(async cx => {
-      this.iconTheme = await loadIconTheme().catch(() => null);
+      this.iconTheme = await loadIconTheme().catch(() => null) ?? BUNDLED;
       cx.notify();
     });
     cx.spawn(async cx => {

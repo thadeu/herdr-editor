@@ -12,7 +12,7 @@ command -v python3 >/dev/null || { echo "python3 is needed to merge keys.json." 
 
 mkdir -p "$home/mods/$name"
 cd "$here/mods/$name"
-cp main.js icons.js mod.json ./*.svg "$home/mods/$name/"
+cp -R main.js icons.js bundled.js mod.json ./*.svg icons "$home/mods/$name/"
 herdr-app check "$home/mods/$name"
 
 python3 - "$home/keys.json" keys.json <<'PY'
