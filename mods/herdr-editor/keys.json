@@ -1,0 +1,3 @@
+{
+  "mod:herdr-editor": { "cmd-s": "herdr-editor.save" }
+}
